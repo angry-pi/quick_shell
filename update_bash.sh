@@ -14,7 +14,7 @@ exist_grep=`grep "GREP_OPTION" ~/.bash_profile`
 echo "exist grep_option:${exist_grep}"
 
 if [ -z "${exist_grep}" ]; then
-    sed -i "1a ${grep_option}" ~/.bashprofile
+    sed -i "1a ${grep_option}" ~/.bash_profile
 else
     sed -i "s/export GREP_OPTIONS.*/${grep_option}/g" ~/.bash_profile
 fi
