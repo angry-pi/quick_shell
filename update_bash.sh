@@ -3,7 +3,7 @@ ps1='export PS1="\[\e[36;m\][\u@\h \w]#\[\e[0m\]"'
 grep_option="export GREP_OPTIONS='--color=auto'"
 
 exist_ps1=`grep "export PS1" ~/.bash_profile`
-echo "exist ps1:${exist_ps1}"
+echo "exist ps1:${exist_ps1}    target=${ps1}"
 if [ -z "${exist_ps1}" ]; then
     sed -i "1a ${ps1}" ~/.bash_profile
 else
